@@ -1,0 +1,42 @@
+import javax.swing.*;
+    import java.awt.event.*;
+    
+    public class latihan {
+        public static void main(String[] args) {
+            // Membuat jendela
+            JFrame frame = new JFrame("Simple GUI Example");
+            
+            // Menentukan ukuran jendela
+            frame.setSize(300, 200);
+            
+            // Menentukan operasi default ketika menutup jendela
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            
+            // Membuat tombol
+            JButton button = new JButton("Tekan disini");
+            
+            // Menambahkan action listener untuk tombol
+            button.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    // Lakukan apa yang Anda inginkan saat tombol diklik
+                    // Misalnya, tutup jendela dan kembalikan nilai
+                    frame.dispose(); // Menutup jendela
+                    returnValue(); // Panggil metode untuk mengembalikan nilai
+                }
+            });
+            
+            // Menambahkan tombol ke jendela
+            frame.getContentPane().add(button);
+            
+            // Menampilkan jendela
+            frame.setVisible(true);
+        }
+        
+        // Metode untuk mengembalikan nilai
+        public static void returnValue() {
+            System.out.println("Hallo Dwi Susanti");
+            System.out.println("See You Next Time");
+            // Anda bisa melakukan return dari sini jika metode Anda mengembalikan nilai
+        }
+    }
+       
