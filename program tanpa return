@@ -1,0 +1,35 @@
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+
+public class latihan2 {
+    public static void main(String[] args) {
+        // Membuat frame
+        JFrame frame = new JFrame("Contoh Tabel");
+        
+        // Membuat data untuk tabel
+        Object[][] data = {
+            {"01", "Latifia", "S.Kom"},
+            {"02", "Septiana", "Amd"},
+            {"03", "Dwi Susanti", "P.hd"}
+        };
+        
+        // Membuat kolom untuk tabel
+        String[] columnNames = {"ID", "Nama", "Gelar"};
+        
+        // Membuat model tabel
+        DefaultTableModel model = new DefaultTableModel(data, columnNames);
+        
+        // Membuat tabel dengan model yang telah dibuat
+        JTable table = new JTable(model);
+        
+        // Menambahkan tabel ke dalam frame dengan scrollbar
+        JScrollPane scrollPane = new JScrollPane(table);
+        frame.add(scrollPane);
+        
+        // Mengatur ukuran frame
+        frame.setSize(400, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
